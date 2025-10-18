@@ -1,77 +1,74 @@
-# 🧱 Concrete Strength Prediction — Linear Regression & Transform Analysis
+Title: Concrete Strength Prediction — Linear Regression and Transform Analysis
 
-## 📘 Overview
-This project analyzes and predicts **Concrete Compressive Strength (MPa)** using classical **Linear Regression** models.  
-We explore how different data preprocessing techniques — such as **standardization** and **log(x+1) transformation** — affect model performance.
+Overview:
+This project focuses on predicting concrete compressive strength (in MPa) using classical linear regression models. The main goal is to understand which preprocessing techniques (such as standardization and log(x+1) transformation) improve model accuracy and generalization.
 
-## 🧩 Dataset
-The dataset includes 8 input features that influence concrete strength:
 
-| Feature | Description |
-|----------|--------------|
-| Cement | Amount of cement (kg/m³) |
-| Blast Furnace Slag | Slag content (kg/m³) |
-| Fly Ash | Fly ash content (kg/m³) |
-| Water | Water content (kg/m³) |
-| Superplasticizer | Chemical additive (kg/m³) |
-| Coarse Aggregate | Coarse aggregate content (kg/m³) |
-| Fine Aggregate | Fine aggregate content (kg/m³) |
-| Age | Curing age (days) |
+Dataset Description:
+The dataset is from the UCI Machine Learning Repository and includes eight input features that affect concrete strength:
 
-Target variable: **Concrete compressive strength (MPa)**
+Cement (kg/m³)
+Blast Furnace Slag (kg/m³)
+Fly Ash (kg/m³)
+Water (kg/m³)
+Superplasticizer (kg/m³)
+Coarse Aggregate (kg/m³)
+Fine Aggregate (kg/m³)
+Age (days)
+Target variable: Concrete Compressive Strength (MPa)
 
----
+Methodology:
 
-## 🔍 Methodology
+Exploratory Data Analysis (EDA):
+Studied correlation between predictors and target variable
+Checked for skewness and outliers
 
-1. **Exploratory Data Analysis (EDA):**
-   - Correlation and distribution analysis
-   - Detecting skewness and outliers
+Modeling Approaches:
 
-2. **Modeling Approaches:**
-   - Linear Regression on **Raw Data**
-   - Linear Regression on **Standardized Data**
-   - Linear Regression on **log(x+1) Transformed Data**
+Linear Regression with raw data
+Linear Regression with standardized data
+Linear Regression with log(x+1) transformed data
 
-3. **Evaluation Metrics:**
-   - Mean Squared Error (MSE)
-   - Coefficient of Determination (R²)
+Evaluation Metrics:
 
----
+Mean Squared Error (MSE)
+R² Score
 
-## 📊 Model Performance Results
+Model Performance Results:
 
-### **MSE (Train vs Test)**
-The **log(x+1)** model cuts error almost in half vs. raw/standardized data:  
-- Train MSE ≈ **55.8**  
-- Test MSE ≈ **54.4**
+MSE (Train vs Test):
+The log(x+1) model cuts error almost in half compared to raw or standardized data.
+Train MSE ≈ 55.8
+Test MSE ≈ 54.4
+This shows the log transformation reduces skewness and heteroscedasticity, giving a more accurate fit.
 
-This shows the log transform reduces skewness and heteroscedasticity, yielding a much more accurate fit.
+R² (Train vs Test):
+Generalization improves significantly from about 0.37 (raw/standardized) to about 0.76 (log(x+1)), showing that the log-transform provides a better model bias for this dataset.
 
-### **R² (Train vs Test)**
-Generalization improves significantly:  
-- From ≈ **0.37 (raw/standardized)**  
-- To ≈ **0.76 (log(x+1))**
+Feature Significance (Log Model):
 
-This confirms that the log-transform provides the right inductive bias for the dataset.
+Cement and Age are the most dominant features.
+Water has a strong negative impact.
+Superplasticizer becomes significant after transformation.
+Both aggregates show weak influence.
 
-### **Feature Significance (Log Model)**
-- **Cement** and **Age** are the most dominant features.  
-- **Water** has a strong negative impact.  
-- **Superplasticizer** becomes significant after transformation.  
-- Aggregates show weak influence overall.
+Key Insights:
 
----
+The log(x+1) transformation improves both model accuracy and generalization.
+Proper preprocessing helps linear models perform better on real-world data.
+The final model is interpretable and performs robustly on unseen samples.
 
-## 🧠 Key Insights
+Requirements:
 
-- Log(x+1) transformation drastically improves both **fit** and **generalization**.  
-- The dataset benefits from scaling and skew correction before linear modeling.  
-- The final model is **simple, interpretable**, and performs robustly on unseen data.
+Python 3.9 or higher
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
 
----
 
-## 💻 Requirements
-
-- Python ≥ 3.9  
-- pandas, numpy, scikit-learn, matplotlib, seaborn
+Author:
+Sayee Sreenivas Guntakrindapalli Bharath
+Graduate Student, Washington University in St. Louis
+Email: g.sayeesreenivas@wustl.edu
