@@ -1,0 +1,11 @@
+Customer_ID	Age_Group	Purchased_Product	Feedback_Rating	Membership	Store_Location	Day_of_Visit	Payment_Method	Return_Customer
+1	18-25	Electronics	Satisfied	Yes	Downtown	Weekday	Card	No
+2	26-35	Clothing	Very Satisfied	No	Suburban	Weekend	Cash	Yes
+3	36-45	Groceries	Neutral	Yes	Downtown	Weekday	Card	No
+4	46-55	Electronics	Unsatisfied	Yes	Rural	Weekend	Online	Yes
+5	56+	Clothing	Satisfied	No	Suburban	Weekday	Cash	No
+6	18-25	Groceries	Very Satisfied	Yes	Downtown	Weekend	Online	Yes
+7	26-35	Accessories	Neutral	No	Rural	Weekday	Card	Yes
+8	36-45	Electronics	Unsatisfied	Yes	Suburban	Weekend	Cash	No
+9	46-55	Groceries	Satisfied	No	Downtown	Weekday	Online	Yes
+10	56+	Clothing	Neutral	Yes	Rural	Weekend	Card	No
